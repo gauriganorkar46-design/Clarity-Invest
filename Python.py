@@ -959,27 +959,39 @@ INPUT BOXES
 }
 
 /* Placeholder text */
-.stTextInput input::placeholder {
+.stTextArea textarea::placeholder {
     color: #9CA3AF !important;
 }
 
 /* Text Area */
-.stTextArea > div > textarea {
+.stTextArea textarea {
     background-color: #111827 !important;
-    color: white !important;
+    color: #FFFFFF !important;
+    caret-color: #FFFFFF !important;
     border: 1px solid #374151 !important;
-    border-radius: 12px !important;
+    border-radius: 10px !important;
 }
 
 /* Selectbox container */
-div[data-baseweb="select"] {
+div[data-baseweb="select"] > div {
     background-color: #111827 !important;
     color: white !important;
-    border-radius: 12px !important;
+    border: 1px solid #374151 !important;
+    border-radius: 10px !important;
 }
 
 /* Selectbox text */
-div[data-baseweb="select"] * {
+div[data-baseweb="select"] span {
+    color: white !important;
+}
+
+/* DROPDOWN OPTIONS */
+ul {
+    background-color: #111827 !important;
+}
+
+li {
+    background-color: #111827 !important;
     color: white !important;
 }
 
