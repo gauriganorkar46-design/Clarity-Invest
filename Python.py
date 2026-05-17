@@ -982,6 +982,7 @@ div[data-baseweb="select"] {
 div[data-baseweb="select"] * {
     color: white !important;
 }
+
 /* ======================================================
 BUTTONS
 ====================================================== */
