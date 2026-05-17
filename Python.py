@@ -949,33 +949,39 @@ p, li, label, span {
 INPUT BOXES
 ====================================================== */
 
-.stTextInput input,
-.stSelectbox select,
-.stTextArea textarea {
-
-   .stSelectbox div[data-baseweb="select"] > div {
-
+/* Text Input */
+.stTextInput > div > div > input {
     background-color: #111827 !important;
-
     color: white !important;
-
     border: 1px solid #374151 !important;
-
     border-radius: 12px !important;
-
     padding: 10px !important;
+}
 
-    /* DROPDOWN MENU */
+/* Placeholder text */
+.stTextInput input::placeholder {
+    color: #9CA3AF !important;
+}
 
-ul {
+/* Text Area */
+.stTextArea > div > textarea {
     background-color: #111827 !important;
-}
-
-li {
     color: white !important;
-
+    border: 1px solid #374151 !important;
+    border-radius: 12px !important;
 }
 
+/* Selectbox container */
+div[data-baseweb="select"] {
+    background-color: #111827 !important;
+    color: white !important;
+    border-radius: 12px !important;
+}
+
+/* Selectbox text */
+div[data-baseweb="select"] * {
+    color: white !important;
+}
 /* ======================================================
 BUTTONS
 ====================================================== */
