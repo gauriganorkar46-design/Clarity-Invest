@@ -2048,7 +2048,7 @@ st.sidebar.markdown("---")
 
 st.sidebar.subheader("⚖️ Compare Companies")
 
-comparison_input = st.sidebar.text_area(
+comparison_input = st.sidebar.text_input(
 
     "Enter company names separated by commas",
 
