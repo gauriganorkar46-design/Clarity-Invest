@@ -1202,7 +1202,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Technology sector is benefiting from digital transformation and innovation demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Technology sector is currently facing weaker momentum and market volatility."
     },
 
@@ -1211,7 +1211,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Financial companies are benefiting from stronger market confidence and lending activity.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Financial sector is currently impacted by economic uncertainty and interest rate pressure."
     },
 
@@ -1220,7 +1220,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Energy companies are benefiting from stronger fuel demand and pricing conditions.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Energy companies are facing pressure from oil price fluctuations."
     },
 
@@ -1229,7 +1229,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Healthcare sector remains supported by stable medical demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Healthcare companies remain relatively defensive despite weaker momentum."
     },
 
@@ -1238,7 +1238,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Industrial companies are benefiting from infrastructure and manufacturing activity.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Industrial sector is facing slower economic activity."
     },
 
@@ -1247,7 +1247,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Consumer defensive companies are showing stable long-term demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Consumer defensive sector remains comparatively resilient."
     },
 
@@ -1256,7 +1256,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Consumer-focused companies are benefiting from stronger consumer demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Changing consumer spending patterns are affecting cyclical demand."
     },
 
@@ -1265,7 +1265,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Transportation companies are benefiting from stronger logistics demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Transportation sector is facing operational and fuel-cost pressures."
     },
 
@@ -1274,7 +1274,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Communication companies are benefiting from rising digital connectivity demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Communication sector is facing stronger competition and slower momentum."
     },
 
@@ -1283,7 +1283,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Utility companies are benefiting from stable infrastructure demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Utilities sector remains comparatively defensive despite weaker momentum."
     },
 
@@ -1292,7 +1292,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Basic materials companies are benefiting from industrial and construction demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Commodity price fluctuations are affecting the materials sector."
     },
 
@@ -1301,7 +1301,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Real estate companies are benefiting from stronger property and infrastructure activity.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Real estate sector is facing pressure from interest rates and slower demand."
     },
 
@@ -1310,7 +1310,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Utilities sector is benefiting from stable energy and infrastructure demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Utilities remain comparatively stable despite slower growth."
     },
 
@@ -1319,7 +1319,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Consumer staples companies are supported by stable daily consumption demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Consumer staples sector remains relatively defensive in weaker markets."
     },
 
@@ -1328,7 +1328,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Communication companies are benefiting from growing media and connectivity demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Communication sector is facing competitive and advertising pressures."
     },
 
@@ -1337,7 +1337,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Real estate services are benefiting from improving property market activity.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Property-related businesses are currently facing slower market movement."
     },
 
@@ -1346,7 +1346,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Airline companies are benefiting from stronger travel demand and tourism activity.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Airline companies are affected by fuel price volatility and changing travel demand."
     },
 
@@ -1355,7 +1355,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Railway companies are benefiting from transportation and infrastructure growth.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Railway companies are currently facing slower industrial movement."
     },
 
@@ -1364,7 +1364,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Automobile companies are benefiting from rising consumer and EV demand.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Auto companies are facing supply-chain and demand-related pressures."
     },
 
@@ -1373,7 +1373,7 @@ def get_sector_insight(sector, trend):
         "Positive Trend":
             "Banks are benefiting from lending growth and economic activity.",
 
-        "Weak Trend":
+        "Neutral Trend":
             "Banking sector is currently facing economic and interest rate pressures."
     }
 
@@ -1414,19 +1414,19 @@ def get_observation(risk, trend):
             "Strong growth potential exists, but volatility is comparatively higher."
         )
 
-    elif trend == "Weak Trend" and risk == "Low Risk":
+    elif trend == "Neutral Trend" and risk == "Low Risk":
 
         return (
             "Stock remains stable, but momentum is currently limited."
         )
 
-    elif trend == "Weak Trend" and risk == "Moderate Risk":
+    elif trend == "Neutral Trend" and risk == "Moderate Risk":
 
         return (
             "Moderate volatility with weaker momentum currently."
         )
 
-    elif trend == "Weak Trend" and risk == "High Risk":
+    elif trend == "Neutral Trend" and risk == "High Risk":
 
         return (
             "Higher volatility and weaker movement indicate cautious investing."
@@ -1652,7 +1652,7 @@ def analyze_stock(company, period):
 
             else:
 
-                trend = "Weak Trend"
+                trend = "Neutral Trend"
 
         elif period == "Medium Term":
 
@@ -1666,7 +1666,7 @@ def analyze_stock(company, period):
 
             else:
 
-                trend = "Weak Trend"
+                trend = "Neutral Trend"
 
         else:
 
@@ -1680,7 +1680,7 @@ def analyze_stock(company, period):
 
             else:
 
-                trend = "Weak Trend"
+                trend = "Neutral Trend"
 
         # =================================================
         # COMPANY INFO
