@@ -1311,61 +1311,58 @@ if analyze_button:
         # NEWS ANALYSIS
         # =========================================================
 
-        with tab4:
+       with tab4:
+           st.subheader("📰 Latest Stock News")
 
-    st.subheader("📰 Latest Stock News")
-
-    try:
-
-        ticker_news = yf.Ticker(result['Ticker'])
-
-        news_data = ticker_news.news
-
-        if len(news_data) > 0:
-
-            for news in news_data[:5]:
-
-                title = news.get("title", "No Title")
-
-                publisher = news.get("publisher", "Unknown")
-
-                link = news.get("link", "")
-
-                thumbnail = news.get("thumbnail")
-
-                st.subheader(title)
-
-                st.write(f"📰 Source: {publisher}")
-
-                # News Image
-                if thumbnail:
-
-                    try:
-
-                        st.image(
-                            thumbnail['resolutions'][0]['url'],
-                            width=500
-                        )
-
-                    except:
-
-                        pass
-
-                st.link_button(
-                    "Read Full News",
-                    link
-                )
-
-                st.markdown("---")
-
-        else:
-
-            st.info("No recent news available.")
-
-    except:
-
-        st.warning("Unable to fetch latest news.")        
-
+        try:
+    
+            ticker_news = yf.Ticker(result['Ticker'])
+    
+            news_data = ticker_news.news
+    
+            if len(news_data) > 0:
+    
+                for news in news_data[:5]:
+    
+                    title = news.get("title", "No Title")
+    
+                    publisher = news.get("publisher", "Unknown")
+    
+                    link = news.get("link", "")
+    
+                    thumbnail = news.get("thumbnail")
+    
+                    st.subheader(title)
+    
+                    st.write(f"📰 Source: {publisher}")
+    
+                    if thumbnail:
+    
+                        try:
+    
+                            st.image(
+                                thumbnail['resolutions'][0]['url'],
+                                width=500
+                            )
+    
+                        except:
+                            pass
+    
+                    st.link_button(
+                        "Read Full News",
+                        link
+                    )
+    
+                    st.markdown("---")
+    
+            else:
+    
+                st.info("No recent news available.")
+    
+        except:
+    
+            st.warning("Unable to fetch latest news.")
+            
 # =========================================================
 # BUY / HOLD / SELL SENTIMENT
 # =========================================================
@@ -1394,7 +1391,7 @@ if analyze_button and result:
 
     else:
 
-        sentiment = "⚠️ SELL / CAUTION"
+        sentiment = "⚠️ Sell Caution"
 
     st.subheader(sentiment)
 
@@ -1745,17 +1742,17 @@ with col1:
     try:
 
         with open(
-            "beginner_guide.pdf",
+            "Clarity_Invest_Beginner_Guide.pdf",
             "rb"
         ) as pdf_file:
 
             st.download_button(
 
-                label="📥 Download Beginner Guide PDF",
+                label="📥 Download Guide PDF",
 
                 data=pdf_file,
 
-                file_name="Clarity_Invest_Guide.pdf",
+                file_name="Clarity_Invest_Beginner_Guide.pdf",
 
                 mime="application/pdf"
 
@@ -1802,7 +1799,7 @@ with col3:
 
 with col4:
 
-    st.error("""
+    st.info("""
 📞 1-on-1 Beginner Guidance  
 ₹299+
 """)
@@ -1833,7 +1830,7 @@ st.write("""
 # =========================================================
 
 try:
-    st.image("your_qr.png", width=250)
+    st.image("clarity_invest_qr.JPEG", width=250)
 except:
     st.warning("QR code not uploaded yet.")
 
